@@ -2,7 +2,7 @@ function init() {
   //put any page initialization/handlebars initialization here
   Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("recipe-details-partial").innerHTML)
   Handlebars.registerPartial('recipeFormPartial', document.getElementById("recipe-form-partial").innerHTML)
-  
+
   Handlebars.registerHelper('displayIngredient', function() {
     if (this != "") {
       return '<li>' + this + '</li>';
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 function loadRecipeForm() {
   const recipeForm = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
   let context = {
-    submitAction: "createRecipe();"
+    submitAction: "createRecipe()"
   }
   document.getElementsByTagName("main")[0].innerHTML += recipeForm(context);
 }
