@@ -6,9 +6,3 @@ document.addEventListener("DOMContentLoaded", function(event) {
 })
 
 var recipeForm = document.getElementById("recipe-form").innerHTML
-
-function loadRcipes() {
-  
-  var result = recipeForm(recipes)
-  document.getElementsByTagName("form")[0].innerHTML += result;
-}
