@@ -7,7 +7,6 @@ function init() {
       return '<li>' + this + '</li>';
     }
   })
-
   displayEditForm('create')
 }
 
