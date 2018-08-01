@@ -42,10 +42,10 @@ function createRecipe() {
     }
   }
 
-  let recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
-  let recipeResult = recipeTemplate(recipe);
+  let recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML)
+  let recipeResult = recipeTemplate(recipe)
   console.log(recipeResult)
-  document.getElementsByTagName("main")[0].innerHTML += recipeResult;
+  document.getElementsByTagName("main")[0].innerHTML += recipeResult
 }
 
 function displayEditForm() {
