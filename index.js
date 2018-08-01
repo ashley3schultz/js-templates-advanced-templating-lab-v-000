@@ -22,26 +22,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
 function createRecipe() {
-  const recipe = {
-    name: document.getElementById("name").value,
-    description: document.getElementById("description").value,
-    ingredients: []
-  }
-  const ing = document.getElementsByName("ingredients")
-  for (let i=0; i < ing.length; i++) {
-    if (ing[i]) {
-      recipe['ingredients'].push(ing[i].value)
-    }
-  }
-  const recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML)
-  const recipeResult = recipeTemplate(recipe)
-  document.getElementsByTagName("main")[0].innerHTML += recipeResult
-}
-
-
-function displayEditForm() {
-  const editForm = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML)
-  document.getElementsByTagName("main")[0].innerHTML += editForm({submitAction: "updateRecipe()"})
+  updateRecipe()
 }
 
 
