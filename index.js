@@ -35,11 +35,12 @@ function createRecipe() {
     description: document.getElementById("description").value,
     ingredients: []
   }
-  let ing = document.getElementsByName("ingredients");
 
-  ingredients = for (let i=0; i < ing.length; i++) {
-    if (ing[i]) {
-      return ing[i].value
+  let ingredients = document.getElementsByName("ingredients")
+
+  for (let i=0; i < ingredients.length i++) {
+    if (ingredients[i]) {
+      recipe['ingredients'].push(ingredients[i].value)
     }
   }
 
