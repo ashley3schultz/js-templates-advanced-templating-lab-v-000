@@ -5,4 +5,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
   init()
 })
 
-var recipeForm = document.getElementById("recipe-form")
+function loadRcipes() {
+  var recipeForm = Handlebars.complile(document.getElementById("recipe-form").innerHTML)
+  var result = recipeForm(recipes)
+  document.getElementsByTagName("main")[0].innerHTML += result;
+}
