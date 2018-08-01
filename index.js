@@ -1,4 +1,5 @@
 function init() {
+  createRecipe()
   //put any page initialization/handlebars initialization here
 }
 
