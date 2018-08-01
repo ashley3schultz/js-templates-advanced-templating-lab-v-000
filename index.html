@@ -22,7 +22,7 @@
     </script>
 
 
-    <script id='recipe-form-partial'>
+    <script id='recipe-form-partial' type="text/x-handlebars-template">
       <form id='recipe-form'>
         Name: <input type='text' name='name' value="{{name}}">
         Description: <input type='text' name='description' value="{{description}}">
@@ -30,10 +30,11 @@
         <input type="submit" value="Submit" onclick={{submitAction}}>
       </form>
     </script>
+    
     <script id="recipe-template" type="text/x-handlebars-template">
 
     </script>
     <!-- Open this file and call `mocha.run()` in console to run tests -->
-  
+
   </body>
 </html>
