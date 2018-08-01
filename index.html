@@ -12,6 +12,12 @@
     <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
     <script src="index.js"></script>
 
+
+    <script id="recipe-form-template" type="text/x-handlebars-template">
+      {{> recipeFormPartial}}
+    </script>
+
+
     <script id='recipe-form-partial'>
       <form id='recipe-form'>
         Name: <input type='text' name='name' value="{{name}}">
