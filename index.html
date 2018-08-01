@@ -24,9 +24,18 @@
 
     <script id='recipe-form-partial' type="text/x-handlebars-template">
       <form id='recipe-form'>
+        
         Name: <input type='text' id='name' value="{{name}}">
+        
         Description: <input type='text' id='description' value="{{description}}">
-        Ingredients: <input type='text' name='ingredients'>
+        
+        Ingredients:
+        1: <input type='text' name='ingredients'>
+        2: <input type='text' name='ingredients'>
+        3: <input type='text' name='ingredients'>
+        4: <input type='text' name='ingredients'>
+        5: <input type='text' name='ingredients'>
+        
         <input type="button" value="Submit" onclick={{submitAction}}>
       </form>
     </script>
