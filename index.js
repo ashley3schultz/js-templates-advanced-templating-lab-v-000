@@ -7,5 +7,3 @@ var recipeForm = document.getElementById("recipe-form").innerHTML
 document.addEventListener("DOMContentLoaded", function(event) {
   init()
 })
-
-
