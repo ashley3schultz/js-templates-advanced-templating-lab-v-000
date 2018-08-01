@@ -7,7 +7,7 @@ function init() {
       return '<li>' + this + '</li>';
     }
   })
-  displayEditForm('create')
+  displayform('create')
 }
 
 
@@ -23,14 +23,18 @@ function createRecipe() {
 }
 
 
-function displayEditForm(arg = 'update') {
-  const form = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML)  //////////////
-  document.getElementsByTagName("main")[0].innerHTML += form({submitAction: `${arg}Recipe()`})
+function displayEditForm() {
+  displayform('update')
 }
 
 
 function updateRecipe() {
   form()
+}
+
+function displayform(arg){
+  const form = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML)  //////////////
+  document.getElementsByTagName("main")[0].innerHTML += form({submitAction: `${arg}Recipe()`})
 }
 
 
