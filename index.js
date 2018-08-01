@@ -8,15 +8,18 @@ function init() {
       return '<li>' + this + '</li>';
     }
   })
-
+  
   const recipeForm = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
   document.getElementsByTagName("main")[0].innerHTML += recipeForm({submitAction: "createRecipe()"})
 }
 
 
+
 document.addEventListener("DOMContentLoaded", function(event) {
   init()
 })
+
+
 
 function createRecipe() {
   const recipe = {
@@ -36,10 +39,12 @@ function createRecipe() {
 }
 
 
+
 function displayEditForm() {
-  const editForm = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
-  document.getElementsByTagName("main")[0].innerHTML += editForm(submitAction: "updateRecipe()");
+  const editForm = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML)
+  document.getElementsByTagName("main")[0].innerHTML += editForm(submitAction: "updateRecipe()")
 }
+
 
 
 function updateRecipe() {
@@ -48,17 +53,13 @@ function updateRecipe() {
     description: document.getElementById("description").value,
     ingredients: []
   }
-
-  let ingredients = document.getElementsByName("ingredients");
-
+  let ingredients = document.getElementsByName("ingredients")
   for (let i=0; i < ingredients.length; i++) {
     if (ingredients[i]) {
-      recipe['ingredients'].push(ingredients[i].value);
+      recipe['ingredients'].push(ingredients[i].value)
     }
   }
-
-  let recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
-  let recipeResult = recipeTemplate(recipe);
-  console.log(recipeResult)
-  document.getElementsByTagName("main")[0].innerHTML = recipeResult;
+  let recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML)
+  let recipeResult = recipeTemplate(recipe)
+  document.getElementsByTagName("main")[0].innerHTML = recipeResult
 }
