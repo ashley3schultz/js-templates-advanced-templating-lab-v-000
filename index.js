@@ -5,8 +5,18 @@ function init() {
 var recipeForm = document.getElementById("recipe-form")
 
 function createRecipe(){
-  var ingredients = document.getElementsByName("ingredients")
-  var nameField = document.getElementById("name")
+  const recipe = {
+    name: document.getElementById("name").value,
+    description: document.getElementById("description").value,
+    ingredients: []
+  }
+
+    let ingredients = document.getElementsByName("ingredients");
+
+  for (let i=0; i < ingredients.length; i++) {
+    if (ingredients[i]) {
+      recipe['ingredients'].push(ingredients[i].value);
+  }
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
