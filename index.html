@@ -14,9 +14,10 @@
 
 
     <form id='recipe-form'>
-      Name: <input type='text' name='name'>
-      Description: <input type='text' name='description'>
-      Ingredients: <input type='text' name='ingredients'>
+      Name: <input type='text' name='name' value="{{name}}">
+      Description: <input type='text' name='description' value="{{description}}">
+      Ingredients: <input type='text' name='ingredients' value="{{ingredients}}">
+      <input type="submit" value="Submit" onclick={{submitAction}}>
     </form>
 
     <script id="recipe-form-template" type="text/x-handlebars-template">
