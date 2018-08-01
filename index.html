@@ -12,14 +12,14 @@
     <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
     <script src="index.js"></script>
 
-
-    <form id='recipe-form'>
-      Name: <input type='text' name='name' value="{{name}}">
-      Description: <input type='text' name='description' value="{{description}}">
-      Ingredients: <input type='text' name='ingredients' value="{{ingredients}}">
-      <input type="submit" value="Submit" onclick={{submitAction}}>
-    </form>
-
+    <script id='recipe-form-partial'>
+      <form id='recipe-form'>
+        Name: <input type='text' name='name' value="{{name}}">
+        Description: <input type='text' name='description' value="{{description}}">
+        Ingredients: <input type='text' name='ingredients' value="{{ingredients}}">
+        <input type="submit" value="Submit" onclick={{submitAction}}>
+      </form>
+    </script>
     <script id="recipe-template" type="text/x-handlebars-template">
 
     </script>
