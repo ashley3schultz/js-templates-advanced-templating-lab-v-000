@@ -8,7 +8,7 @@ function init() {
       return '<li>' + this + '</li>';
     }
   })
-  
+
   const recipeForm = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
   document.getElementsByTagName("main")[0].innerHTML += recipeForm({submitAction: "createRecipe()"})
 }
@@ -17,11 +17,6 @@ function init() {
 document.addEventListener("DOMContentLoaded", function(event) {
   init()
 })
-
-function loadRecipeForm() {
-  
-}
-
 
 function createRecipe() {
   const recipe = {
@@ -43,10 +38,7 @@ function createRecipe() {
 
 function displayEditForm() {
   const editForm = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
-  const context = {
-    submitAction: "updateRecipe();"
-  }
-  document.getElementsByTagName("main")[0].innerHTML += editForm(context);
+  document.getElementsByTagName("main")[0].innerHTML += editForm(submitAction: "updateRecipe()");
 }
 
 
