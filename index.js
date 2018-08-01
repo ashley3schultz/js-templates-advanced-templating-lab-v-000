@@ -36,6 +36,7 @@ function updateRecipe() {
   form()
 }
 
+
 function form(){
   const recipe = {
     name: document.getElementById("name").value,
