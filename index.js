@@ -18,10 +18,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 function loadRecipeForm() {
   const recipeForm = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
-  let context = {
-    submitAction: "createRecipe()"
-  }
-  document.getElementsByTagName("main")[0].innerHTML += recipeForm(context);
+  document.getElementsByTagName("main")[0].innerHTML += recipeForm({submitAction: "createRecipe()"})
 }
 
 
