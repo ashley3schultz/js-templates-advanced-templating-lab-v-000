@@ -2,6 +2,15 @@ function init() {
   //put any page initialization/handlebars initialization here
 }
 
+document.addEventListener("DOMContentLoaded", function(event) {
+  init()
+})
+
+function createPartials() {
+  Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("recipe-details-partial").innerHTML);
+  Handlebars.registerPartial('recipeFormPartial', document.getElementById("recipe-form-partial").innerHTML);
+}
+
 function createRecipe(){
   const recipe = {
     name: document.getElementById("name").value,
@@ -20,7 +29,3 @@ function createRecipe(){
   console.log(recipeResult)
   document.getElementsByTagName("main")[0].innerHTML += recipeResult;
 }
-
-document.addEventListener("DOMContentLoaded", function(event) {
-  init()
-})
