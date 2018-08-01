@@ -1,7 +1,11 @@
 function init() {
   //put any page initialization/handlebars initialization here
   createPartials();
-  createHelpers();
+  Handlebars.registerHelper('displayIngredient', function() {
+    if (this != "") {
+      return '<li>' + this + '</li>';
+    }
+  })
   loadRecipeForm();
 }
 document.addEventListener("DOMContentLoaded", function(event) {
@@ -15,11 +19,13 @@ function createPartials() {
 }
 
 
+function createHelpers() {
   Handlebars.registerHelper('displayIngredient', function() {
     if (this != "") {
       return '<li>' + this + '</li>';
     }
   })
+}
 
 
 function loadRecipeForm() {
