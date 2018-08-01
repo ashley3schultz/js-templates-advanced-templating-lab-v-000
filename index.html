@@ -34,7 +34,14 @@
 
 
     <!-- PARTIAL -->
-
+    <script id="recipe-details-partial" type="text/x-handlebars-template">
+      <p>Description: {{description}}</p>
+      <p>Ingredients:<br>
+        {{#each ingredients}}
+          {{{displayIngredient this}}}
+        {{/each}}
+      </p>
+    </script>
 
 
     <!-- PARTIAL -->
