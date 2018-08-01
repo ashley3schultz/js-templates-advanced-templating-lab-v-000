@@ -9,7 +9,7 @@ function init() {
   })
 
   const form = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML)  //////////////
-  document.getElementsByTagName("main")[0].innerHTML += form({submitAction: "form()"})
+  document.getElementsByTagName("main")[0].innerHTML += form({submitAction: "createRecipe()"})
 }
 
 
@@ -27,7 +27,7 @@ function createRecipe() {
 
 function displayEditForm() {
   const form = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML)  //////////////
-  document.getElementsByTagName("main")[0].innerHTML += form({submitAction: "form()"})
+  document.getElementsByTagName("main")[0].innerHTML += form({submitAction: "updateRecipe()"})
 }
 
 
