@@ -10,12 +10,9 @@ function init() {
   displayform('create')
 }
 
-
-
 document.addEventListener("DOMContentLoaded", function(event) {
   init()
 })
-
 
 
 function createRecipe() {
