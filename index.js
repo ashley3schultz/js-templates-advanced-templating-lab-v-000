@@ -4,6 +4,10 @@ function init() {
 
 var recipeForm = document.getElementById("recipe-form")
 
+function createRecipe(){
+  
+}
+
 document.addEventListener("DOMContentLoaded", function(event) {
   init()
 })
