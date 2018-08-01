@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
 function createRecipe() {
-updateRecipe()
+  updateRecipe()
 }
 
 
