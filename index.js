@@ -41,9 +41,8 @@ function createRecipe() {
       recipe['ingredients'].push(ing[i].value)
     }
   }
-
-  let recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML)
-  let recipeResult = recipeTemplate(recipe)
+  const recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML)
+  const recipeResult = recipeTemplate(recipe)
   document.getElementsByTagName("main")[0].innerHTML += recipeResult
 }
 
