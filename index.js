@@ -35,9 +35,7 @@ function createRecipe() {
     description: document.getElementById("description").value,
     ingredients: []
   }
-
-  let ing = document.getElementsByName("ingredients")
-
+  const ing = document.getElementsByName("ingredients")
   for (let i=0; i < ing.length; i++) {
     if (ing[i]) {
       recipe['ingredients'].push(ing[i].value)
