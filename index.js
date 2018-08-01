@@ -7,9 +7,10 @@ function init() {
 document.addEventListener("DOMContentLoaded", function(event) {
   init()
 })
+
 function createPartials() {
   Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("recipe-details-partial").innerHTML);
-Handlebars.registerPartial('recipeFormPartial', document.getElementById("recipe-form-partial").innerHTML);
+  Handlebars.registerPartial('recipeFormPartial', document.getElementById("recipe-form-partial").innerHTML);
 }
 
 function createHelpers() {
@@ -25,22 +26,20 @@ function loadRecipeForm() {
   let context = {
     submitAction: "createRecipe();"
   }
-
   document.getElementsByTagName("main")[0].innerHTML += recipeForm(context);
 }
 
 function createRecipe() {
   const recipe = {
-  name: document.getElementById("name").value,
+    name: document.getElementById("name").value,
     description: document.getElementById("description").value,
     ingredients: []
   }
+  let ing = document.getElementsByName("ingredients");
 
-  let ingredients = document.getElementsByName("ingredients");
-
-  for (let i=0; i < ingredients.length; i++) {
-    if (ingredients[i]) {
-      recipe['ingredients'].push(ingredients[i].value);
+  ingredients = for (let i=0; i < ing.length; i++) {
+    if (ing[i]) {
+      return ing[i].value
     }
   }
 
