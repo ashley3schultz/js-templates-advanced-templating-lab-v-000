@@ -18,16 +18,6 @@ function createPartials() {
   Handlebars.registerPartial('recipeFormPartial', document.getElementById("recipe-form-partial").innerHTML);
 }
 
-
-function createHelpers() {
-  Handlebars.registerHelper('displayIngredient', function() {
-    if (this != "") {
-      return '<li>' + this + '</li>';
-    }
-  })
-}
-
-
 function loadRecipeForm() {
   const recipeForm = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
   let context = {
