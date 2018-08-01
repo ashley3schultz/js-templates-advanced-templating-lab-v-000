@@ -5,7 +5,8 @@ function init() {
 var recipeForm = document.getElementById("recipe-form")
 
 function createRecipe(){
-  
+  var ingredients = document.getElementsByName("ingredients")
+  var nameField = document.getElementById("name")
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
