@@ -48,7 +48,7 @@ function createRecipe() {
 
 function displayEditForm() {
   const editForm = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
-  let context = {
+  const context = {
     submitAction: "updateRecipe();"
   }
 
